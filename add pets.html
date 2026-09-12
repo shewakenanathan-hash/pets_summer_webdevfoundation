@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Pets</title>
+  <link rel="stylesheet" href="pawhaven.css">
+</head>
+<body data-page="add">
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="logo" href="index.html"><span class="logo-icon">🐾</span>Pawhaven</a>
+      <nav class="main-nav">
+        <a class="nav-link" href="browse pets.html">Browse pets</a>
+        <a class="nav-link" href="edit pets.html">Edit pets</a>
+        <a class="nav-link active" href="add pets.html">Add pets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pets-section page-section">
+      <div class="container add-wrap">
+        <div class="section-header centered">
+          <h1>Add a pet</h1>
+          <p>Tell us about a pet looking for a loving home.</p>
+        </div>
+
+        <section class="add-form-card">
+          <form id="petForm" class="pet-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="petName">Name</label>
+                <input type="text" id="petName" name="petName" placeholder="e.g. Bella" required>
+              </div>
+              <div class="form-group">
+                <label for="animalType">Animal type</label>
+                <select id="animalType" name="animalType" required>
+                  <option value="">Choose animal type</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Bird">Bird</option>
+                  <option value="Hamster">Hamster</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="breed">Breed</label>
+                <input type="text" id="breed" name="breed" placeholder="e.g. Labrador" required>
+              </div>
+              <div class="form-group">
+                <label for="petAge">Age</label>
+                <input type="number" id="petAge" name="petAge" min="0" placeholder="e.g. 2" required>
+              </div>
+              <div class="form-group">
+                <label for="petGender">Gender</label>
+                <select id="petGender" name="petGender" required>
+                  <option value="">Choose gender</option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Add Pet</button>
+              <a href="browse pets.html" class="btn btn-outline">Browse Pets</a>
+            </div>
+
+            <div class="error-state hidden" id="formError"></div>
+            <div class="success-message hidden" id="successMessage"></div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🐾</span>Pawhaven</div>
+          <p>Local pet care, adoption, and forever-home matching.</p>
+        </div>
+        <div class="footer-links">
+          <a href="browse pets.html">Browse pets</a>
+          <a href="edit pets.html">Edit pets</a>
+          <a href="add pets.html">Add pets</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Pawhaven. Every friend deserves a home.</div>
+    </div>
+  </footer>
+
+  <script src="pets.js"></script>
+</body>
+</html>
