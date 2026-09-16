@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Pets</title>
+  <link rel="stylesheet" href="./CSS/pawhaven.css">
+</head>
+<body data-page="edit">
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="logo" href="index.html"><span class="logo-icon">🐾</span>Pawhaven</a>
+      <nav class="main-nav">
+        <a class="nav-link" href="browse pets.html">Browse pets</a>
+        <a class="nav-link active" href="edit pets.html">Edit pets</a>
+        <a class="nav-link" href="add pets.html">Add pets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pets-section page-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Edit pets</h1>
+          <p>Update pet profiles and remove pets from the adoption list.</p>
+        </div>
+
+        <div class="edit-list-wrap">
+          <div class="state-message hidden" id="editStatus"></div>
+          <div class="state-message" id="editLoading">Loading pet profiles...</div>
+          <div class="state-message hidden" id="editError"></div>
+          <div class="edit-list" id="editPetsList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🐾</span>Pawhaven</div>
+          <p>Local pet care, adoption, and forever-home matching.</p>
+        </div>
+        <div class="footer-links">
+          <a href="browse pets.html">Browse pets</a>
+          <a href="edit pets.html">Edit pets</a>
+          <a href="add pets.html">Add pets</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Pawhaven. Every friend deserves a home.</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/edit.js"></script>
+</body>
+</html>
