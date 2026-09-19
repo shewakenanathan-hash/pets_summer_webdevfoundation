@@ -70,9 +70,9 @@ CSS — Hasset
 
 Hasset worked on the CSS styling, layout, and visual appearance of the website.
 
-JavaScript — Nathan
+JavaScript — Me
 
-Nathan worked on the JavaScript functionality and interactive features of PawHaven.
+I worked on the JavaScript functionality and interactive features of PawHaven.
 
 
 
@@ -111,10 +111,9 @@ PawHaven is built around the belief that every pet deserves a safe, caring, and 
 Contributor| Contribution
 Bilen| HTML
 Hasset| CSS
-Nathan| JavaScript
+Me| JavaScript
 
-Changes
-1.Change in color
+
 
 
 📄 License
