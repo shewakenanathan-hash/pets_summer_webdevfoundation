@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PawHaven pet adoption directory">
+  <title>PawHaven | Find a Friend</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/config.js" defer></script>
+  <script src="../js/index.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PawHaven home">
+        <span class="brand-mark">🐾</span>
+        <span>Paw<span>Haven</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Browse Pets</a>
+        <a class="button button-small" href="add-pet.html">+ Add a pet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">A little love goes a long way</p>
+          <h1>Find your new <em>best friend.</em></h1>
+          <p class="hero-copy">Meet friendly pets looking for a safe, loving home. Search by name or breed and filter by species or adoption status.</p>
+          <a class="button" href="#pet-list">Meet the pets <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-circle"></div>
+          <div class="hero-card hero-card-one">🐶</div>
+          <div class="hero-card hero-card-two">🐱</div>
+          <span class="spark spark-one">✦</span>
+          <span class="spark spark-two">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container content-section" id="pet-list">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Our adoption board</p>
+          <h2>Pets waiting for you</h2>
+        </div>
+        <span id="pet-count" class="result-count" aria-live="polite"></span>
+      </div>
+
+      <div class="filter-panel">
+        <label class="search-field">
+          <span class="sr-only">Search pets</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Search by name or breed..." autocomplete="off">
+        </label>
+
+        <label>
+          <span class="sr-only">Filter by species</span>
+          <select id="species-filter">
+            <option value="">All species</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Rabbit</option>
+            <option>Bird</option>
+            <option>Small Animal</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="sr-only">Filter by status</span>
+          <select id="status-filter">
+            <option value="">All statuses</option>
+            <option>Available</option>
+            <option>Pending</option>
+            <option>Adopted</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="sr-only">Sort pets</span>
+          <select id="sort-filter">
+            <option value="newest">Newest first</option>
+            <option value="youngest">Youngest first</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="list-state" class="state-box is-hidden" role="status" aria-live="polite"></div>
+      <div id="pet-grid" class="pet-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="recent-section" class="container content-section recent-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Fresh faces</p>
+          <h2>Recently added</h2>
+        </div>
+      </div>
+      <div id="recent-grid" class="recent-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>PawHaven</strong> — small paws, big hearts.</p>
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
