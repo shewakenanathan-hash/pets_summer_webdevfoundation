@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawHaven | Pet Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Paw<span>Haven</span> 🐾</a>
+      <button class="menu-button" id="menuButton" type="button">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Browse Pets</a>
+        <a href="add-pet.html">Add a Pet</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <a class="back-link" href="index.html">← Back to pets</a>
+    <div id="loading" class="state-card">Loading pet...</div>
+    <div id="error" class="state-card error-state hidden"></div>
+
+    <section id="details" class="details-card hidden">
+      <div class="details-image-wrap">
+        <img id="petImage" class="details-image" alt="Pet photo">
+      </div>
+
+      <div class="details-content">
+        <div class="details-top">
+          <div>
+            <span id="petStatus" class="status-badge">Available</span>
+            <h1 id="petName"></h1>
+            <p id="petBreed" class="lead"></p>
+          </div>
+        </div>
+
+        <div id="viewMode">
+          <div class="info-grid">
+            <div><span>Species</span><strong id="petSpecies"></strong></div>
+            <div><span>Age</span><strong id="petAge"></strong></div>
+            <div><span>Gender</span><strong id="petGender"></strong></div>
+            <div><span>Size</span><strong id="petSize"></strong></div>
+          </div>
+          <div class="description-box">
+            <h3>About this pet</h3>
+            <p id="petDescription"></p>
+          </div>
+          <div class="details-actions">
+            <button id="editButton" class="button secondary" type="button">Edit</button>
+            <button id="adoptButton" class="button primary" type="button">Mark as adopted</button>
+            <button id="deleteButton" class="button danger" type="button">Delete</button>
+          </div>
+        </div>
+
+        <form id="editForm" class="pet-form hidden" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="editName">Name *</label>
+              <input id="editName" type="text">
+              <small class="field-error" id="editNameError"></small>
+            </div>
+            <div class="form-group">
+              <label for="editSpecies">Species *</label>
+              <select id="editSpecies">
+                <option>Dog</option><option>Cat</option><option>Rabbit</option><option>Bird</option><option>Small Animal</option><option>Other</option>
+              </select>
+              <small class="field-error" id="editSpeciesError"></small>
+            </div>
+            <div class="form-group">
+              <label for="editBreed">Breed</label>
+              <input id="editBreed" type="text">
+            </div>
+            <div class="form-group">
+              <label for="editAge">Age *</label>
+              <input id="editAge" type="number" min="0" step="1">
+              <small class="field-error" id="editAgeError"></small>
+            </div>
+            <div class="form-group">
+              <label for="editGender">Gender</label>
+              <select id="editGender"><option>Unknown</option><option>Male</option><option>Female</option></select>
+            </div>
+            <div class="form-group">
+              <label for="editSize">Size</label>
+              <select id="editSize"><option>Small</option><option>Medium</option><option>Large</option></select>
+            </div>
+            <div class="form-group full">
+              <label for="editImageUrl">Image URL *</label>
+              <input id="editImageUrl" type="url">
+              <small class="field-error" id="editImageUrlError"></small>
+              <div class="image-preview-wrap"><img id="editImagePreview" class="image-preview hidden" alt="Preview"></div>
+            </div>
+            <div class="form-group full">
+              <label for="editDescription">Description *</label>
+              <textarea id="editDescription" rows="5"></textarea>
+              <small class="field-error" id="editDescriptionError"></small>
+            </div>
+            <div class="form-group">
+              <label for="editStatus">Status</label>
+              <select id="editStatus"><option>Available</option><option>Pending</option><option>Adopted</option></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button id="cancelEditButton" class="button secondary" type="button">Cancel</button>
+            <button id="saveButton" class="button primary" type="submit">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="confirmPanel" class="confirm-panel hidden">
+      <h3>Delete this pet?</h3>
+      <p>This action cannot be undone.</p>
+      <div>
+        <button id="cancelDelete" class="button secondary" type="button">Cancel</button>
+        <button id="confirmDelete" class="button danger" type="button">Yes, delete</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <strong>PawHaven 🐾</strong>
+      <p>Every pet deserves a loving home.</p>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/pet-details.js"></script>
+</body>
+</html>
