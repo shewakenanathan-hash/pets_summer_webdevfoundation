@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawHaven | Browse Pets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Paw<span>Haven</span> 🐾</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Browse Pets</a>
+        <a href="add-pet.html">Add a Pet</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">Find a friend. Give love. 🐾</p>
+          <h1>Find your new best friend.</h1>
+          <p>Browse pets looking for a safe and loving home.</p>
+          <a class="button primary" href="add-pet.html">＋ Add a Pet</a>
+        </div>
+        <div class="hero-paw">🐶</div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PawHaven pets</p>
+          <h2>Pets waiting for a home</h2>
+        </div>
+        <span id="petCount" class="count-badge">Loading...</span>
+      </div>
+
+      <form id="filterForm" class="filter-box">
+        <label>
+          Search
+          <input id="searchInput" type="search" placeholder="Search by name or breed">
+        </label>
+        <label>
+          Species
+          <select id="speciesFilter">
+            <option value="">All species</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Rabbit</option>
+            <option>Bird</option>
+            <option>Small Animal</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Status
+          <select id="statusFilter">
+            <option value="">All statuses</option>
+            <option>Available</option>
+            <option>Pending</option>
+            <option>Adopted</option>
+          </select>
+        </label>
+        <button class="button secondary" type="submit">Search</button>
+      </form>
+
+      <div id="loading" class="state-card">Loading pets...</div>
+      <div id="error" class="state-card error-state hidden"></div>
+      <div id="empty" class="state-card hidden">
+        <div class="state-icon">🐾</div>
+        <h3>No pets found</h3>
+        <p>Try another search or filter.</p>
+      </div>
+      <div id="petGrid" class="pet-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <strong>PawHaven 🐾</strong>
+      <p>Every pet deserves a loving home.</p>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+</html>
