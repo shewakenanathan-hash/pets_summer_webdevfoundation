@@ -1,126 +1,76 @@
-# 🐾 PawHaven
+# PawHaven 🐾
 
-Find Your New Best Friend ❤️
+PawHaven is a small pet-adoption CRUD website built with plain HTML, CSS and JavaScript.
 
-PawHaven is a modern pet adoption website designed to help people discover loving pets looking for their forever homes. The platform provides a simple and friendly way to browse pets, add new pet listings, and manage existing pet information.
+## Features
 
-🌐 Live Website: "PawHaven" (https://pawhaven-alpha.vercel.app) 
+- Browse all pets
+- Search pets by name or breed
+- Filter by species and adoption status
+- View a pet's full profile
+- Add a new pet with client-side validation
+- Edit an existing pet
+- Mark a pet as adopted
+- Delete a pet with confirmation
+- Responsive design for phone, tablet and desktop
+- Image URL preview on Add and Edit forms
 
-🐶 About PawHaven
+## Folder structure
 
-PawHaven was created with one simple idea:
+```text
+pets/
+├── README.md
+└── frontend/
+    ├── html/
+    │   ├── index.html
+    │   ├── add-pet.html
+    │   └── pet-details.html
+    ├── css/
+    │   └── style.css
+    └── js/
+        ├── config.js
+        ├── index.js
+        ├── add-pet.js
+        └── pet-details.js
+```
 
-«Every friend deserves a home. 🐾»
+## API
 
-The website connects people with pets that are looking for caring families. Visitors can explore featured pets and use the platform to manage pet listings.
+For local development, `frontend/js/config.js` uses:
 
-The website currently includes sections for:
+`http://localhost:4100/api`
 
-- 🏠 Home
-- 🐕 Browse Pets
-- ➕ Add Pets
-- ✏️ Edit Pets
-- 🐶 Dogs
-- 🐈 Cats
-- 🐦 Birds
-- ❤️ Pet Care & Love
+If your instructor gives your team a deployed API URL, replace `API_BASE_URL` in `config.js`.
 
+The frontend uses:
 
-✨ Features
+- `GET /api/pets`
+- `GET /api/pets/:id`
+- `POST /api/pets`
+- `PUT /api/pets/:id`
+- `DELETE /api/pets/:id`
 
-🐾 Browse Pets
+## How to run
 
-Explore pets that are available and looking for a loving home.
+1. Open the `pets` folder in VS Code.
+2. Make sure the API server is running.
+3. Install the VS Code **Live Server** extension if needed.
+4. Open `frontend/html/index.html`.
+5. Click **Go Live**.
+6. Test Browse → Add → Edit → Mark as adopted → Delete.
 
-➕ Add Pets
+## Live link
 
-Add a new pet to the PawHaven platform with its relevant information.
+Add the deployed frontend URL here after deployment:
 
-✏️ Edit Pets
+`YOUR_LIVE_URL_HERE`
 
-Update or manage existing pet listings.
+## GitHub repository
 
-🏡 Adoption Focus
+Use the required repository naming format:
 
-The website is designed around helping pets find caring and permanent homes.
+`groupName_batchName_courseName`
 
-📱 Responsive Design
+Example:
 
-The interface is designed to provide a clean experience across different screen sizes.
-
-
-
-💻 Technologies Used
-
-This project was created using:
-
-- HTML — Website structure
-- CSS — Styling and visual design
-- JavaScript — Interactivity and functionality
-- Vercel — Website deployment
-
-
-👨‍💻 Development Team
-
-HTML — Bilen
-
-Bilen worked on the HTML structure and organization of the PawHaven website.
-
-CSS — Hasset
-
-Hasset worked on the CSS styling, layout, and visual appearance of the website.
-
-JavaScript — Me
-
-I worked on the JavaScript functionality and interactive features of PawHaven.
-
-
-
-🎯 Project Goal
-
-The goal of PawHaven is to create a simple, welcoming digital space where people can discover pets and help connect them with their future families.
-
-We believe technology can make pet adoption easier, more accessible, and more enjoyable.
-
-
-🌐 Live Demo
-
-Visit the live PawHaven website:
-
-https://pawhaven-alpha.vercel.app/
-
-
-
-📸 Website Preview
-
-PawHaven features a friendly pet-focused interface with a homepage introducing the adoption platform and navigation options for browsing, adding, and editing pets.
-
-
-
-❤️ Our Mission
-
-Love. Care. Adoption.
-
-PawHaven is built around the belief that every pet deserves a safe, caring, and loving forever home.
-
-🐕 🐈 🐦 🐾
-
-
-👥 Contributors
-
-Contributor| Contribution
-Bilen| HTML
-Hasset| CSS
-Me| JavaScript
-
-
-
-
-📄 License
-
-This project was created as a collaborative web development project.
-
-© 2026 PawHaven. All rights reserved.
-
-
-🐾 Every Friend Deserves a Home.
+`pets_summer_webdevfoundation`
