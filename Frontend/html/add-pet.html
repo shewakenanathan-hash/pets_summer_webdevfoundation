@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Add a pet to PawHaven">
+  <title>PawHaven | Add a Pet</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PawHaven home">
+        <span class="brand-mark">🐾</span>
+        <span>Paw<span>Haven</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Browse Pets</a>
+        <a class="button button-small active-button" href="add-pet.html">+ Add a pet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <a class="back-link" href="index.html">← Back to pets</a>
+    <div class="form-header">
+      <p class="eyebrow">Give a pet a place on the board</p>
+      <h1>Add a new pet</h1>
+      <p>Tell future adopters a little about this special friend.</p>
+    </div>
+
+    <form id="pet-form" class="pet-form" novalidate>
+      <div class="form-layout">
+        <div class="form-card">
+          <h2>Pet information</h2>
+          <div class="form-grid">
+            <div class="field field-full">
+              <label for="name">Name <span>*</span></label>
+              <input id="name" name="name" type="text" maxlength="80" required>
+              <small class="field-error" data-error-for="name"></small>
+            </div>
+
+            <div class="field">
+              <label for="species">Species <span>*</span></label>
+              <select id="species" name="species" required>
+                <option value="">Choose species</option>
+                <option>Dog</option><option>Cat</option><option>Rabbit</option>
+                <option>Bird</option><option>Small Animal</option><option>Other</option>
+              </select>
+              <small class="field-error" data-error-for="species"></small>
+            </div>
+
+            <div class="field">
+              <label for="breed">Breed</label>
+              <input id="breed" name="breed" type="text" maxlength="80" placeholder="e.g. Golden Retriever">
+              <small class="field-error" data-error-for="breed"></small>
+            </div>
+
+            <div class="field">
+              <label for="age">Age (years) <span>*</span></label>
+              <input id="age" name="age" type="number" min="0" step="1" required>
+              <small class="field-error" data-error-for="age"></small>
+            </div>
+
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option>Unknown</option><option>Male</option><option>Female</option>
+              </select>
+              <small class="field-error" data-error-for="gender"></small>
+            </div>
+
+            <div class="field">
+              <label for="size">Size</label>
+              <select id="size" name="size">
+                <option>Medium</option><option>Small</option><option>Large</option>
+              </select>
+              <small class="field-error" data-error-for="size"></small>
+            </div>
+
+            <div class="field">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option>Available</option><option>Pending</option><option>Adopted</option>
+              </select>
+              <small class="field-error" data-error-for="status"></small>
+            </div>
+
+            <div class="field field-full">
+              <label for="imageUrl">Photo URL <span>*</span></label>
+              <input id="imageUrl" name="imageUrl" type="url" placeholder="https://picsum.photos/seed/my-pet/640/480" required>
+              <small class="field-help">Use a direct image URL or a stable picsum.photos placeholder.</small>
+              <small class="field-error" data-error-for="imageUrl"></small>
+            </div>
+
+            <div class="field field-full">
+              <label for="description">Description <span>*</span></label>
+              <textarea id="description" name="description" rows="6" maxlength="1000" required placeholder="Tell adopters about this pet's personality..."></textarea>
+              <small class="field-error" data-error-for="description"></small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="preview-card">
+          <p class="eyebrow">Photo preview</p>
+          <div class="image-preview">
+            <img id="image-preview" src="https://picsum.photos/seed/pawhaven-preview/640/480" alt="Pet photo preview">
+            <div id="preview-placeholder" class="preview-placeholder">Your photo will appear here</div>
+          </div>
+          <p class="preview-note">A clear photo helps adopters connect with a pet before they visit.</p>
+        </aside>
+      </div>
+
+      <div id="form-message" class="form-message is-hidden" role="alert"></div>
+
+      <div class="form-actions">
+        <a class="button button-ghost" href="index.html">Cancel</a>
+        <button id="submit-button" class="button" type="submit">Add pet <span aria-hidden="true">→</span></button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>PawHaven</strong> — small paws, big hearts.</p>
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+</body>
+  <script src="../js/config.js" defer></script>
+  <script src="../js/add-pet.js" defer></script>
+</html>
