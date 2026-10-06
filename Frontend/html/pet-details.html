@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PawHaven pet profile">
+  <title>PawHaven | Pet Details</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/config.js" defer></script>
+  <script src="../js/pet-details.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PawHaven home">
+        <span class="brand-mark">🐾</span>
+        <span>Paw<span>Haven</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Browse Pets</a>
+        <a class="button button-small" href="add-pet.html">+ Add a pet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container details-page">
+    <a class="back-link" href="index.html">← Back to pets</a>
+    <div id="detail-state" class="state-box" role="status" aria-live="polite">Loading pet profile…</div>
+
+    <article id="pet-profile" class="pet-profile is-hidden"></article>
+
+    <section id="edit-section" class="edit-section is-hidden" aria-labelledby="edit-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Update this profile</p>
+          <h2 id="edit-heading">Edit pet</h2>
+        </div>
+      </div>
+
+      <form id="edit-form" class="pet-form" novalidate>
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="field field-full">
+              <label for="edit-name">Name <span>*</span></label>
+              <input id="edit-name" name="name" type="text" maxlength="80" required>
+              <small class="field-error" data-error-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="edit-species">Species <span>*</span></label>
+              <select id="edit-species" name="species" required>
+                <option>Dog</option><option>Cat</option><option>Rabbit</option>
+                <option>Bird</option><option>Small Animal</option><option>Other</option>
+              </select>
+              <small class="field-error" data-error-for="species"></small>
+            </div>
+            <div class="field">
+              <label for="edit-breed">Breed</label>
+              <input id="edit-breed" name="breed" type="text" maxlength="80">
+              <small class="field-error" data-error-for="breed"></small>
+            </div>
+            <div class="field">
+              <label for="edit-age">Age (years) <span>*</span></label>
+              <input id="edit-age" name="age" type="number" min="0" step="1" required>
+              <small class="field-error" data-error-for="age"></small>
+            </div>
+            <div class="field">
+              <label for="edit-gender">Gender</label>
+              <select id="edit-gender" name="gender">
+                <option>Unknown</option><option>Male</option><option>Female</option>
+              </select>
+              <small class="field-error" data-error-for="gender"></small>
+            </div>
+            <div class="field">
+              <label for="edit-size">Size</label>
+              <select id="edit-size" name="size">
+                <option>Medium</option><option>Small</option><option>Large</option>
+              </select>
+              <small class="field-error" data-error-for="size"></small>
+            </div>
+            <div class="field">
+              <label for="edit-status">Status</label>
+              <select id="edit-status" name="status">
+                <option>Available</option><option>Pending</option><option>Adopted</option>
+              </select>
+              <small class="field-error" data-error-for="status"></small>
+            </div>
+            <div class="field field-full">
+              <label for="edit-imageUrl">Photo URL <span>*</span></label>
+              <input id="edit-imageUrl" name="imageUrl" type="url" required>
+              <small class="field-error" data-error-for="imageUrl"></small>
+              <img id="edit-preview" class="edit-preview" alt="Updated pet preview">
+            </div>
+            <div class="field field-full">
+              <label for="edit-description">Description <span>*</span></label>
+              <textarea id="edit-description" name="description" rows="6" maxlength="1000" required></textarea>
+              <small class="field-error" data-error-for="description"></small>
+            </div>
+          </div>
+        </div>
+        <div id="edit-message" class="form-message is-hidden" role="alert"></div>
+        <div class="form-actions">
+          <button id="cancel-edit" class="button button-ghost" type="button">Cancel</button>
+          <button id="save-edit" class="button" type="submit">Save changes</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="delete-panel" class="confirm-panel is-hidden" aria-labelledby="delete-title">
+      <div>
+        <p class="eyebrow">One last check</p>
+        <h2 id="delete-title">Remove this pet?</h2>
+        <p>This permanently deletes the pet from the adoption list. This action cannot be undone.</p>
+      </div>
+      <div class="confirm-actions">
+        <button id="cancel-delete" class="button button-ghost" type="button">Keep pet</button>
+        <button id="confirm-delete" class="button button-danger" type="button">Yes, delete</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>PawHaven</strong> — small paws, big hearts.</p>
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
